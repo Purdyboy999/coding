@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08 · Tabel HTML — PareLabs</title>
+  <style>
+    body { font-family: sans-serif; max-width: 740px; margin: 0 auto; padding: 30px 20px; color: #333; line-height: 1.8; }
+    .label { display: inline-block; background: #7c6af7; color: white; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+    h1 { color: #7c6af7; border-bottom: 3px solid #7c6af7; padding-bottom: 10px; }
+    h2 { color: #555; margin-top: 32px; }
+    .demo { border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin: 12px 0; background: #fafafa; }
+    .info { background: #e8f4f8; border-left: 4px solid #3498db; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    hr { border: none; border-top: 1px solid #eee; margin: 28px 0; }
+    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+
+    /* Styling tabel umum */
+    .tabel-rapi { border-collapse: collapse; width: 100%; font-size: 14px; }
+    .tabel-rapi th { background: #7c6af7; color: white; padding: 10px 14px; text-align: left; font-weight: 500; }
+    .tabel-rapi td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; }
+    .tabel-rapi tbody tr:hover { background: #f0eeff; }
+    .tabel-rapi tfoot td { background: #f5f5f5; font-weight: bold; border-top: 2px solid #ccc; }
+
+    /* Badge nilai */
+    .grade-a { background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+    .grade-b { background: #e3f2fd; color: #1565c0; padding: 2px 8px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+    .grade-c { background: #fff8e1; color: #f57f17; padding: 2px 8px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <span class="label">PareLabs Web Dev · Sesi 1 · Topik 08</span>
+  <h1>Tabel HTML</h1>
+
+  <!-- ===== TABEL DASAR ===== -->
+  <h2>1. Tabel Dasar (thead, tbody, tfoot)</h2>
+  <div class="demo">
+    <table class="tabel-rapi">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Peserta</th>
+          <th>Program</th>
+          <th>Nilai Akhir</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Budi Santoso</td>
+          <td>Speaking Pro</td>
+          <td>92</td>
+          <td><span class="grade-a">A</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Siti Rahayu</td>
+          <td>WHV Ready</td>
+          <td>87</td>
+          <td><span class="grade-b">B</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Ahmad Fauzi</td>
+          <td>Beasiswa Ready</td>
+          <td>78</td>
+          <td><span class="grade-b">B</span></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Dewi Lestari</td>
+          <td>Speaking Pro</td>
+          <td>95</td>
+          <td><span class="grade-a">A</span></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Reza Pratama</td>
+          <td>WHV Ready</td>
+          <td>65</td>
+          <td><span class="grade-c">C</span></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Rata-rata Nilai</td>
+          <td>83.4</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- ===== JADWAL ===== -->
+  <h2>2. Tabel Jadwal — dengan colspan & rowspan</h2>
+  <div class="demo">
+    <table class="tabel-rapi">
+      <thead>
+        <tr>
+          <th>Waktu</th>
+          <th>Senin</th>
+          <th>Selasa</th>
+          <th>Rabu</th>
+          <th>Kamis</th>
+          <th>Jumat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>19.00–20.30</strong></td>
+          <td>HTML</td>
+          <td>CSS</td>
+          <td>JavaScript</td>
+          <td>Build Web + SEO</td>
+          <td>Hosting & Deploy</td>
+        </tr>
+        <tr>
+          <td><strong>Mentor</strong></td>
+          <!-- colspan: sel ini menempati 5 kolom (semua hari) -->
+          <td colspan="5" style="text-align: center; color: #7c6af7;">Tim Mentor PareLabs Academy</td>
+        </tr>
+        <tr>
+          <td><strong>Lokasi</strong></td>
+          <td colspan="5" style="text-align: center;">Offline · PareLabs Academy, Kampung Inggris Pare</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info">💡 <code>colspan="5"</code> membuat satu sel menempati 5 kolom sekaligus.</div>
+  </div>
+
+  <!-- ===== TABEL PERBANDINGAN HARGA ===== -->
+  <h2>3. Tabel Perbandingan Paket</h2>
+  <div class="demo">
+    <table class="tabel-rapi">
+      <thead>
+        <tr>
+          <th>Fitur</th>
+          <th style="text-align:center">Gratis</th>
+          <th style="text-align:center; background:#5a4ad1">⭐ Premium</th>
+          <th style="text-align:center">Enterprise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Akses Materi</td>
+          <td style="text-align:center">Terbatas</td>
+          <td style="text-align:center; background:#f5f3ff">Penuh</td>
+          <td style="text-align:center">Penuh</td>
+        </tr>
+        <tr>
+          <td>Live Session</td>
+          <td style="text-align:center; color:#e74c3c">✗</td>
+          <td style="text-align:center; color:#27ae60; background:#f5f3ff">✓</td>
+          <td style="text-align:center; color:#27ae60">✓</td>
+        </tr>
+        <tr>
+          <td>Sertifikat</td>
+          <td style="text-align:center; color:#e74c3c">✗</td>
+          <td style="text-align:center; color:#27ae60; background:#f5f3ff">✓</td>
+          <td style="text-align:center; color:#27ae60">✓</td>
+        </tr>
+        <tr>
+          <td>Mentor Support</td>
+          <td style="text-align:center">Forum</td>
+          <td style="text-align:center; background:#f5f3ff">1-on-1</td>
+          <td style="text-align:center">Dedicated</td>
+        </tr>
+        <tr>
+          <td><strong>Harga/bulan</strong></td>
+          <td style="text-align:center"><strong>Gratis</strong></td>
+          <td style="text-align:center; background:#f5f3ff"><strong style="color:#7c6af7">Rp 299.000</strong></td>
+          <td style="text-align:center"><strong>Rp 799.000</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== ROWSPAN ===== -->
+  <h2>4. Rowspan — Sel Menempati Beberapa Baris</h2>
+  <div class="demo">
+    <table class="tabel-rapi">
+      <thead>
+        <tr>
+          <th>Kategori</th>
+          <th>Program</th>
+          <th>Durasi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- rowspan="2": sel ini menempati 2 baris -->
+          <td rowspan="2" style="background: #f0eeff; font-weight: bold; color: #7c6af7; vertical-align: middle;">
+            English Proficiency
+          </td>
+          <td>Speaking Pro</td>
+          <td>1 bulan</td>
+        </tr>
+        <tr>
+          <!-- Tidak ada td untuk kolom Kategori karena sudah di-rowspan -->
+          <td>IELTS Preparation</td>
+          <td>3 bulan</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="background: #e8f5e9; font-weight: bold; color: #2e7d32; vertical-align: middle;">
+            Specific Purpose
+          </td>
+          <td>WHV Ready</td>
+          <td>3 bulan</td>
+        </tr>
+        <tr>
+          <td>Beasiswa Ready</td>
+          <td>4 bulan</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info">💡 <code>rowspan="2"</code> membuat satu sel menempati 2 baris ke bawah.</div>
+  </div>
+
+  <!-- ===== LATIHAN ===== -->
+  <h2>Latihan</h2>
+  <div class="demo" style="background: #fffde7; border-color: #f9a825;">
+    <ol>
+      <li>Buat tabel jadwal mingguan belajar kamu (hari × waktu)</li>
+      <li>Buat tabel daftar peserta dengan kolom: No, Nama, Asal Kota, Program, Status</li>
+      <li>Gunakan <code>colspan</code> di baris total/keterangan bawah tabel</li>
+      <li>Beri warna berbeda di <code>&lt;thead&gt;</code> menggunakan atribut <code>style</code></li>
+      <li>Buat tabel perbandingan 3 editor: VS Code, Firebase Studio, Notepad</li>
+    </ol>
+  </div>
+
+  <footer>
+    PareLabs Academy · Kampung Inggris Pare · <a href="https://parelabs.id">parelabs.id</a>
+  </footer>
+
+</body>
+</html>

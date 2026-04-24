@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05 · Teks & Heading — PareLabs</title>
+  <style>
+    body { font-family: sans-serif; max-width: 740px; margin: 0 auto; padding: 30px 20px; color: #333; line-height: 1.8; }
+    .label { display: inline-block; background: #7c6af7; color: white; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+    .demo { border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin: 12px 0; background: #fafafa; }
+    .info { background: #e8f4f8; border-left: 4px solid #3498db; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    .warn { background: #fff8e1; border-left: 4px solid #ffb300; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    h2.section { color: #7c6af7; border-bottom: 2px solid #e0e0e0; padding-bottom: 6px; margin-top: 36px; }
+    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+
+  <span class="label">PareLabs Web Dev · Sesi 1 · Topik 05</span>
+
+  <h2 class="section">1. Heading h1 – h6</h2>
+  <div class="demo">
+    <h1>Ini adalah h1 — Judul Utama (hanya 1 per halaman)</h1>
+    <h2>Ini adalah h2 — Sub Judul</h2>
+    <h3>Ini adalah h3 — Sub-sub Judul</h3>
+    <h4>Ini adalah h4 — Level 4</h4>
+    <h5>Ini adalah h5 — Level 5</h5>
+    <h6>Ini adalah h6 — Level 6 (terkecil)</h6>
+    <div class="warn">⚠️ Di halaman sungguhan, hanya gunakan SATU &lt;h1&gt; — ini untuk SEO. Di sini kita tampilkan semua untuk demo.</div>
+  </div>
+
+  <h2 class="section">2. Paragraf &lt;p&gt;</h2>
+  <div class="demo">
+    <p>Ini adalah paragraf pertama. Browser otomatis menambahkan jarak (margin) di atas dan bawah setiap paragraf, sehingga teks lebih mudah dibaca.</p>
+    <p>Ini adalah paragraf kedua. Perhatikan jarak antar paragraf — itu bukan dari &lt;br&gt;, melainkan dari default margin tag &lt;p&gt; di browser.</p>
+    <p>Paragraf ketiga. Setiap &lt;p&gt; adalah block element — selalu mulai di baris baru.</p>
+  </div>
+
+  <h2 class="section">3. Line Break &lt;br&gt; dan Horizontal Rule &lt;hr&gt;</h2>
+  <div class="demo">
+    <p>
+      Baris pertama dalam paragraf ini.<br>
+      Ini baris kedua — dipisah dengan &lt;br&gt;.<br>
+      Dan ini baris ketiga.<br>
+      Semua masih dalam satu tag &lt;p&gt; yang sama.
+    </p>
+    <div class="info">💡 Gunakan &lt;br&gt; untuk puisi, alamat, atau teks yang butuh baris baru tanpa paragraf baru. Jangan pakai &lt;br&gt;&lt;br&gt; untuk spacing — gunakan CSS margin.</div>
+    <hr>
+    <p>Garis di atas dihasilkan oleh tag &lt;hr&gt; — digunakan sebagai pemisah bagian.</p>
+  </div>
+
+  <h2 class="section">4. Elemen Teks Khusus</h2>
+  <div class="demo">
+    <p><strong>strong</strong> — teks ini penting dan dicetak tebal secara semantik</p>
+    <p><em>em</em> — teks ini ditekankan dan dicetak miring secara semantik</p>
+    <p><mark>mark</mark> — teks ini di-highlight seperti stabilo</p>
+    <p><small>small</small> — teks kecil, cocok untuk catatan kaki atau copyright</p>
+    <p><del>Harga lama: Rp 500.000</del> <ins>Harga baru: Rp 350.000</ins></p>
+    <p>Rumus air: H<sub>2</sub>O — menggunakan &lt;sub&gt; untuk subscript</p>
+    <p>Rumus kuadrat: x<sup>2</sup> + y<sup>2</sup> — menggunakan &lt;sup&gt; untuk superscript</p>
+    <p>Kode program: <code>console.log("Halo dari JavaScript!")</code></p>
+    <p><abbr title="HyperText Markup Language">HTML</abbr> adalah bahasa markup — coba hover kata HTML!</p>
+  </div>
+
+  <h2 class="section">5. Blockquote & Quote</h2>
+  <div class="demo">
+    <blockquote style="border-left: 4px solid #7c6af7; padding: 12px 20px; margin: 0; background: #f5f3ff; border-radius: 0 8px 8px 0; font-style: italic;">
+      "Dari Kampung Inggris Pare untuk Indonesia — Pasti Bisa."
+      <footer style="margin-top:8px; font-size:13px; color:#888; font-style:normal;">— PareLabs Academy</footer>
+    </blockquote>
+    <p style="margin-top: 14px;">Einstein pernah berkata: <q>Imajinasi lebih penting dari pengetahuan.</q> — menggunakan tag &lt;q&gt; inline.</p>
+  </div>
+
+  <h2 class="section">6. Pre-formatted Text</h2>
+  <div class="demo">
+    <pre style="background: #1e1e1e; color: #ccc; padding: 16px; border-radius: 8px; font-size: 13px; overflow-x: auto;">
+function sapa(nama) {
+    console.log("Halo, " + nama + "!");
+    console.log("Selamat belajar HTML di PareLabs.");
+}
+
+sapa("Budi");
+    </pre>
+    <div class="info">💡 &lt;pre&gt; mempertahankan spasi, tab, dan baris baru. Cocok untuk menampilkan kode program.</div>
+  </div>
+
+  <h2 class="section">7. Contoh Lengkap: Artikel Blog</h2>
+  <div class="demo">
+    <article>
+      <h2>Kenapa Belajar Web Development di 2026?</h2>
+      <p><small>Ditulis oleh <strong>Tim PareLabs</strong> · 20 April 2026</small></p>
+      <hr>
+      <p>Di era <mark>AI dan digital transformation</mark>, kemampuan web development semakin <em>krusial</em> bagi siapa pun yang ingin berkarir di dunia teknologi.</p>
+      <p>Menurut data terbaru, demand untuk web developer <strong>meningkat 25%</strong> dibanding tahun lalu. Dan dengan tools AI modern, waktu belajar bisa <del>1 tahun</del> <ins>3–6 bulan</ins> saja!</p>
+      <blockquote style="border-left: 4px solid #ccc; padding: 8px 16px; color: #666; font-style:italic;">
+        "Belajar coding itu seperti belajar bahasa baru — susah di awal, tapi makin lama makin terasa natural."
+      </blockquote>
+      <p>Mulai perjalananmu sekarang di <strong>PareLabs Academy</strong>.<sup>*</sup></p>
+      <p><small><sup>*</sup>Program Web Dev Batch 1 gratis untuk pendaftar awal.</small></p>
+    </article>
+  </div>
+
+  <h2 class="section">Latihan</h2>
+  <div class="demo" style="background: #fffde7; border-color: #f9a825;">
+    <ol>
+      <li>Buat struktur artikel dengan h1, h2, h3 yang tepat</li>
+      <li>Tambahkan paragraf dengan <code>&lt;strong&gt;</code> dan <code>&lt;em&gt;</code> di dalamnya</li>
+      <li>Gunakan <code>&lt;mark&gt;</code> untuk highlight kata kunci</li>
+      <li>Buat daftar harga dengan <code>&lt;del&gt;</code> (harga lama) dan <code>&lt;ins&gt;</code> (harga baru)</li>
+      <li>Tambahkan blockquote dengan kutipan motivasi</li>
+    </ol>
+  </div>
+
+  <footer>
+    PareLabs Academy · Kampung Inggris Pare · <a href="https://parelabs.id">parelabs.id</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- =====================================================
+       HEAD: METADATA — tidak terlihat di halaman
+       ===================================================== -->
+
+  <!-- Charset: mendukung semua karakter termasuk emoji & huruf Indonesia -->
+  <meta charset="UTF-8">
+
+  <!-- Viewport: membuat halaman responsif di smartphone & tablet -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Deskripsi: muncul di hasil pencarian Google -->
+  <meta name="description" content="Belajar HTML dasar bersama PareLabs Academy di Kampung Inggris Pare">
+
+  <!-- Author: info penulis halaman -->
+  <meta name="author" content="PareLabs Academy">
+
+  <!-- Title: teks yang muncul di TAB browser dan hasil Google -->
+  <title>02 · Struktur Dasar HTML — PareLabs</title>
+
+  <!-- CSS internal (bisa juga link ke file CSS terpisah) -->
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      line-height: 1.8;
+      color: #333;
+    }
+    section {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      background: #fafafa;
+    }
+    .tag { color: #c0392b; font-family: monospace; background: #f0f0f0; padding: 1px 6px; border-radius: 3px; }
+    .info { background: #e8f4f8; border-left: 4px solid #3498db; padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+    h2 { color: #7c6af7; }
+    footer { text-align: center; padding: 20px; color: #999; font-size: 14px; border-top: 1px solid #eee; margin-top: 40px; }
+  </style>
+</head>
+
+<body>
+  <!-- =====================================================
+       BODY: KONTEN — semua yang terlihat di halaman
+       ===================================================== -->
+
+  <h1>02 · Struktur Dasar HTML</h1>
+  <p>Halaman ini mendemonstrasikan <strong>struktur dasar HTML yang benar</strong>. Buka kode sumber halaman ini (<span class="tag">Ctrl+U</span>) untuk melihat setiap bagiannya.</p>
+
+  <section>
+    <h2>Apa yang ada di &lt;head&gt;?</h2>
+    <p>Tag <span class="tag">&lt;head&gt;</span> di atas berisi:</p>
+    <ul>
+      <li><span class="tag">charset UTF-8</span> — agar karakter Indonesia tampil dengan benar</li>
+      <li><span class="tag">viewport</span> — agar tampil baik di HP dan tablet</li>
+      <li><span class="tag">description</span> — muncul di deskripsi Google</li>
+      <li><span class="tag">title</span> — teks di tab browser (lihat tab kamu!)</li>
+      <li><span class="tag">style</span> — CSS internal untuk tampilan halaman ini</li>
+    </ul>
+    <div class="info">
+      💡 Semua ini <strong>tidak terlihat</strong> di halaman, tapi sangat penting untuk SEO, tampilan di HP, dan pengalaman user.
+    </div>
+  </section>
+
+  <section>
+    <h2>Apa yang ada di &lt;body&gt;?</h2>
+    <p>Semua yang kamu lihat di halaman ini ada di dalam tag <span class="tag">&lt;body&gt;</span> — heading ini, paragraf ini, section ini, dan footer di bawah.</p>
+
+    <div class="info">
+      💡 Rule: Kalau kamu ingin sesuatu <strong>terlihat</strong> di halaman → tulis di dalam <span class="tag">&lt;body&gt;</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cek: Apakah HTML-mu Valid?</h2>
+    <p>Kamu bisa validasi HTML di:</p>
+    <p><a href="https://validator.w3.org" target="_blank">validator.w3.org</a> — tools resmi W3C untuk cek validitas HTML</p>
+    <p>HTML yang valid → lebih baik di SEO, lebih konsisten di semua browser.</p>
+  </section>
+
+  <section>
+    <h2>Latihan</h2>
+    <ol>
+      <li>Ganti isi tag <span class="tag">&lt;title&gt;</span> → lihat perubahan di tab browser</li>
+      <li>Ganti isi <span class="tag">meta description</span> → bayangkan ini muncul di Google</li>
+      <li>Coba hapus <span class="tag">charset UTF-8</span> → ketik karakter Indonesia → apa yang terjadi?</li>
+      <li>Coba hapus <span class="tag">viewport meta</span> → buka di developer tools mobile view → apa yang terjadi?</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>PareLabs Academy · Kampung Inggris Pare · <a href="https://parelabs.id">parelabs.id</a></p>
+  </footer>
+
+</body>
+</html>

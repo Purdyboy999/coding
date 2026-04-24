@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11 · Div & Span — PareLabs</title>
+  <style>
+    body { font-family: sans-serif; max-width: 740px; margin: 0 auto; padding: 30px 20px; color: #333; line-height: 1.8; }
+    .label { display: inline-block; background: #7c6af7; color: white; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+    h1 { color: #7c6af7; border-bottom: 3px solid #7c6af7; padding-bottom: 10px; }
+    h2 { color: #555; margin-top: 32px; }
+    .demo { border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin: 12px 0; background: #fafafa; }
+    .info { background: #e8f4f8; border-left: 4px solid #3498db; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    hr { border: none; border-top: 1px solid #eee; margin: 28px 0; }
+    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+
+    /* Card component dari div */
+    .card { background: white; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; }
+    .card-header { background: #7c6af7; color: white; padding: 16px 20px; }
+    .card-header h3 { margin: 0; font-size: 17px; }
+    .card-header p { margin: 4px 0 0; font-size: 13px; opacity: 0.85; }
+    .card-body { padding: 18px 20px; }
+    .card-body p { font-size: 14px; color: #555; margin-bottom: 12px; }
+    .card-footer { padding: 14px 20px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; background: #fafafa; }
+    .card-footer .price { font-size: 18px; font-weight: bold; color: #7c6af7; }
+    .card-footer button { background: #7c6af7; color: white; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+    .card-footer button:hover { background: #6b5af0; }
+
+    /* Grid dari div */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+
+    /* Badge dari span */
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: bold; margin-left: 6px; }
+    .badge-new { background: #e8f5e9; color: #2e7d32; }
+    .badge-hot { background: #fce4ec; color: #c62828; }
+    .badge-sale { background: #fff3e0; color: #e65100; }
+
+    /* Highlight dari span */
+    .highlight-purple { background: #ede9ff; color: #5a4ad1; padding: 1px 5px; border-radius: 3px; }
+    .text-price-new { color: #c0392b; font-weight: bold; font-size: 1.1em; }
+    .text-price-old { text-decoration: line-through; color: #aaa; font-size: 0.9em; }
+    .text-success { color: #27ae60; }
+    .text-warning { color: #f39c12; }
+
+    /* Wrapper container */
+    .container { max-width: 100%; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+  <span class="label">PareLabs Web Dev · Sesi 1 · Topik 11</span>
+  <h1>Div & Span</h1>
+
+  <!-- ===== DIV BLOCK ===== -->
+  <h2>1. &lt;div&gt; — Block Container</h2>
+  <div class="demo">
+    <p>Setiap <code>&lt;div&gt;</code> di bawah ini mulai di baris baru dan mengambil lebar penuh:</p>
+
+    <div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 6px 0;">
+      Div 1 — background biru muda
+    </div>
+    <div style="background: #e8f5e9; border-left: 4px solid #27ae60; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 6px 0;">
+      Div 2 — background hijau muda (mulai baris baru)
+    </div>
+    <div style="background: #fff3e0; border-left: 4px solid #f39c12; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 6px 0;">
+      Div 3 — background oranye muda (mulai baris baru lagi)
+    </div>
+    <div class="info">💡 Setiap div selalu dimulai di baris baru — ini yang dimaksud "block element".</div>
+  </div>
+
+  <!-- ===== SPAN INLINE ===== -->
+  <h2>2. &lt;span&gt; — Inline Container</h2>
+  <div class="demo">
+    <p>
+      Ini adalah paragraf biasa. Di dalam kalimat ini ada
+      <span class="highlight-purple">kata yang di-highlight ungu</span>,
+      lalu lanjut teks normal, kemudian harga
+      <span class="text-price-old">Rp 500.000</span>
+      coret dan harga baru
+      <span class="text-price-new">Rp 299.000</span>
+      — semua dalam satu baris yang mengalir.
+    </p>
+    <p>
+      Status peserta:
+      <span class="text-success">✓ Aktif</span> ·
+      Pembayaran:
+      <span class="text-warning">⚠ Menunggu verifikasi</span> ·
+      Sertifikat:
+      <span style="color:#aaa">Belum tersedia</span>
+    </p>
+    <div class="info">💡 Span mengalir bersama teks — tidak mulai baris baru. Cocok untuk styling sebagian kecil teks.</div>
+  </div>
+
+  <!-- ===== BADGE DARI SPAN ===== -->
+  <h2>3. Badge / Label dari &lt;span&gt;</h2>
+  <div class="demo">
+    <p>Speaking Pro <span class="badge badge-hot">🔥 Populer</span></p>
+    <p>WHV Ready <span class="badge badge-new">✨ Baru</span></p>
+    <p>Web Dev Batch 1 <span class="badge badge-sale">🎁 GRATIS</span></p>
+    <div class="info">💡 Badge biasanya dibuat dari <code>&lt;span&gt;</code> dengan class CSS. Bisa juga pakai <code>&lt;small&gt;</code> atau <code>&lt;em&gt;</code> tergantung semantiknya.</div>
+  </div>
+
+  <hr>
+
+  <!-- ===== CARD DARI DIV ===== -->
+  <h2>4. Card Component dari &lt;div&gt;</h2>
+  <div class="demo">
+    <div class="card">
+      <div class="card-header">
+        <h3>🎤 Speaking Pro</h3>
+        <p>Program intensif bahasa Inggris lisan</p>
+      </div>
+      <div class="card-body">
+        <p>Kuasai bahasa Inggris lisan dalam 1 bulan. Materi mencakup pronunciation, vocabulary, grammar dalam konteks percakapan, dan public speaking.</p>
+        <ul style="font-size:14px; color:#555; padding-left:20px;">
+          <li>20 sesi intensif</li>
+          <li>Live practice dengan native-like speaker</li>
+          <li>Sertifikat kelulusan</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <div>
+          <span class="text-price-old">Rp 500.000</span><br>
+          <span class="price">Rp 299.000</span>
+        </div>
+        <button>Daftar Sekarang</button>
+      </div>
+    </div>
+    <div class="info" style="margin-top:14px">💡 Card ini sepenuhnya dibangun dari <code>&lt;div&gt;</code> dengan class berbeda. CSS yang membuat tampilannya berbeda, bukan HTML-nya.</div>
+  </div>
+
+  <!-- ===== GRID DARI DIV ===== -->
+  <h2>5. Grid Layout dari &lt;div&gt;</h2>
+  <div class="demo">
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-header" style="background: #7c6af7;"><h3 style="font-size:15px">Speaking Pro</h3></div>
+        <div class="card-body"><p style="font-size:13px">Bahasa Inggris lisan, 1 bulan</p></div>
+        <div class="card-footer"><span class="price" style="font-size:15px">Rp 299k</span><button style="font-size:12px; padding:6px 12px">Daftar</button></div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background: #3ecf8e;"><h3 style="font-size:15px">WHV Ready</h3></div>
+        <div class="card-body"><p style="font-size:13px">Persiapan WHV, 3 bulan</p></div>
+        <div class="card-footer"><span class="price" style="font-size:15px; color:#3ecf8e">Rp 799k</span><button style="font-size:12px; padding:6px 12px; background:#3ecf8e">Daftar</button></div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background: #f5a623;"><h3 style="font-size:15px">Beasiswa Ready</h3></div>
+        <div class="card-body"><p style="font-size:13px">Persiapan beasiswa, 4 bulan</p></div>
+        <div class="card-footer"><span class="price" style="font-size:15px; color:#f5a623">Rp 999k</span><button style="font-size:12px; padding:6px 12px; background:#f5a623">Daftar</button></div>
+      </div>
+    </div>
+    <div class="info" style="margin-top:14px">💡 Tiga card berdampingan ini menggunakan CSS Grid pada parent <code>&lt;div class="card-grid"&gt;</code>.</div>
+  </div>
+
+  <!-- ===== LATIHAN ===== -->
+  <h2>Latihan</h2>
+  <div class="demo" style="background: #fffde7; border-color: #f9a825;">
+    <ol>
+      <li>Buat card profil diri dengan <code>&lt;div&gt;</code>: foto, nama, bio, tombol kontak</li>
+      <li>Gunakan <code>&lt;span&gt;</code> untuk membuat badge "Sedang Belajar" di samping nama teknologi</li>
+      <li>Buat grid 3 card program menggunakan <code>&lt;div&gt;</code></li>
+      <li>Gunakan <code>&lt;span&gt;</code> untuk highlight harga diskon dalam sebuah kalimat</li>
+    </ol>
+  </div>
+
+  <footer>
+    PareLabs Academy · Kampung Inggris Pare · <a href="https://parelabs.id">parelabs.id</a>
+  </footer>
+
+</body>
+</html>

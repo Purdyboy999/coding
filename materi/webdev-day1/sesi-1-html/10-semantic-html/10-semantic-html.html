@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 · Semantic HTML — PareLabs</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: sans-serif; color: #333; line-height: 1.7; }
+
+    /* ===== LAYOUT SEMANTIC ===== */
+    header { background: #1a1a2e; color: white; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    header .logo { color: #7c6af7; font-size: 20px; font-weight: bold; text-decoration: none; }
+    header nav ul { list-style: none; display: flex; gap: 4px; }
+    header nav ul li a { color: #ccc; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 14px; transition: background .15s; }
+    header nav ul li a:hover { background: #7c6af7; color: white; }
+
+    .page-body { display: grid; grid-template-columns: 1fr 260px; gap: 32px; max-width: 1000px; margin: 0 auto; padding: 32px 20px; }
+    main { min-width: 0; }
+
+    section { margin-bottom: 32px; }
+    section h2 { color: #7c6af7; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #eee; }
+
+    article { background: white; border: 1px solid #e0e0e0; border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+    article header { background: transparent; padding: 0; height: auto; display: block; color: #333; margin-bottom: 8px; }
+    article h3 { font-size: 17px; color: #333; }
+    article .meta { font-size: 12px; color: #999; margin-bottom: 10px; display: flex; gap: 12px; }
+    article p { font-size: 14px; color: #555; line-height: 1.7; }
+    article footer { background: transparent; padding: 12px 0 0; border-top: 1px solid #eee; margin-top: 12px; display: flex; gap: 10px; }
+    article footer a { font-size: 13px; color: #7c6af7; text-decoration: none; }
+
+    aside { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 10px; padding: 20px; height: fit-content; }
+    aside h3 { color: #555; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+    aside ul { list-style: none; }
+    aside ul li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+    aside ul li:last-child { border-bottom: none; }
+    aside ul li a { color: #7c6af7; text-decoration: none; }
+    .details-widget { background: #f0eeff; border-radius: 8px; padding: 14px; margin-top: 16px; }
+    .details-widget summary { cursor: pointer; font-size: 14px; color: #7c6af7; font-weight: 500; }
+    .details-widget p { font-size: 13px; color: #555; margin-top: 8px; line-height: 1.6; }
+
+    footer.site-footer { background: #1a1a2e; color: #aaa; padding: 32px 40px; margin-top: 0; }
+    footer.site-footer .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto; }
+    footer.site-footer h4 { color: white; margin-bottom: 12px; font-size: 14px; }
+    footer.site-footer ul { list-style: none; }
+    footer.site-footer ul li { padding: 3px 0; font-size: 13px; }
+    footer.site-footer ul li a { color: #888; text-decoration: none; }
+    footer.site-footer ul li a:hover { color: #7c6af7; }
+    footer.site-footer address { font-style: normal; font-size: 13px; line-height: 1.8; }
+    footer.site-footer .bottom { border-top: 1px solid #333; padding-top: 16px; margin-top: 24px; text-align: center; font-size: 12px; max-width: 1000px; margin-left: auto; margin-right: auto; }
+
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; }
+    .badge-new { background: #e8f5e9; color: #2e7d32; }
+    .badge-hot { background: #fce4ec; color: #c62828; }
+
+    @media (max-width: 600px) { .page-body { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr !important; } }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER — bagian atas, biasanya logo + nav ===== -->
+  <header>
+    <a href="#" class="logo">PareLabs</a>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Program</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#" style="background:#7c6af7;color:white">Daftar Gratis</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT AREA ===== -->
+  <div class="page-body">
+
+    <!-- ===== MAIN — konten utama (hanya 1 per halaman) ===== -->
+    <main>
+
+      <!-- ===== SECTION — blok bertema ===== -->
+      <section id="blog-terbaru" aria-labelledby="blog-heading">
+        <h2 id="blog-heading">Blog & Artikel</h2>
+
+        <!-- ===== ARTICLE — konten mandiri (bisa berdiri sendiri) ===== -->
+        <article>
+          <header>
+            <h3>Kenapa HTML Semantic Penting untuk SEO?</h3>
+            <div class="meta">
+              <!-- TIME: tanggal dengan format machine-readable -->
+              <time datetime="2026-04-20">20 April 2026</time>
+              <span>· oleh Tim PareLabs</span>
+              <span class="badge badge-hot">🔥 Hot</span>
+            </div>
+          </header>
+          <p>Semantic HTML bukan sekadar best practice — ini adalah fondasi bagaimana Google, Bing, dan search engine lainnya membaca dan memahami konten website kamu. Penggunaan tag yang tepat bisa membuat perbedaan signifikan pada ranking pencarian...</p>
+          <footer>
+            <a href="#">Baca selengkapnya →</a>
+            <a href="#">💬 12 Komentar</a>
+            <a href="#">❤️ 48 Suka</a>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Vibe Coding: Cara Baru Belajar Programming di Era AI</h3>
+            <div class="meta">
+              <time datetime="2026-04-15">15 April 2026</time>
+              <span>· oleh Admin</span>
+              <span class="badge badge-new">✨ Baru</span>
+            </div>
+          </header>
+          <p>Dengan munculnya tools seperti GitHub Copilot, ChatGPT, dan Claude, cara orang belajar coding sedang berubah drastis. Vibe coding memungkinkan pemula untuk membuat website nyata sejak hari pertama, dengan AI sebagai asisten...</p>
+          <footer>
+            <a href="#">Baca selengkapnya →</a>
+            <a href="#">💬 7 Komentar</a>
+            <a href="#">❤️ 31 Suka</a>
+          </footer>
+        </article>
+      </section>
+
+      <!-- ===== SECTION kedua ===== -->
+      <section id="program-unggulan">
+        <h2>Program Unggulan</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <article>
+            <header><h3>🎤 Speaking Pro</h3></header>
+            <p>Kuasai bahasa Inggris lisan dalam 1 bulan intensif. Cocok untuk persiapan kerja, studi, dan kehidupan sehari-hari.</p>
+            <footer><a href="#">Lihat detail →</a></footer>
+          </article>
+          <article>
+            <header><h3>🌏 WHV Ready</h3></header>
+            <p>Persiapan bahasa Inggris untuk Working Holiday Visa Australia dan Selandia Baru. 3 bulan intensif.</p>
+            <footer><a href="#">Lihat detail →</a></footer>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== ASIDE — konten samping/pendukung ===== -->
+    <aside aria-label="Sidebar">
+      <h3>Artikel Populer</h3>
+      <ul>
+        <li><a href="#">Panduan Lengkap HTML5 2026</a></li>
+        <li><a href="#">CSS Flexbox vs Grid</a></li>
+        <li><a href="#">JavaScript untuk Pemula</a></li>
+        <li><a href="#">Deploy Website Gratis</a></li>
+      </ul>
+
+      <!-- DETAILS — accordion bawaan HTML tanpa JavaScript -->
+      <div class="details-widget">
+        <details>
+          <summary>Tentang PareLabs Academy</summary>
+          <p>PareLabs Academy adalah lembaga pendidikan bahasa Inggris berbasis di Kampung Inggris Pare, Kediri. Kami menawarkan program online dan offline.</p>
+        </details>
+      </div>
+
+      <div class="details-widget" style="margin-top:12px">
+        <details>
+          <summary>Jadwal Batch 1 Web Dev</summary>
+          <p>Senin–Jumat, 20–24 April 2026. Pukul 19.00–20.30 WIB. Offline di PareLabs Academy.</p>
+        </details>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER — bagian bawah halaman ===== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h4>PareLabs Academy</h4>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Program</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Karir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Program</h4>
+        <ul>
+          <li><a href="#">Speaking Pro</a></li>
+          <li><a href="#">WHV Ready</a></li>
+          <li><a href="#">Beasiswa Ready</a></li>
+          <li><a href="#">Web Dev</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <!-- ADDRESS: informasi kontak/alamat -->
+        <address>
+          Jl. Anyelir, Tulungrejo<br>
+          Kampung Inggris Pare<br>
+          Kediri, Jawa Timur 64212<br>
+          <a href="mailto:hello@parelabs.id" style="color:#7c6af7">hello@parelabs.id</a><br>
+          <a href="tel:+6285178431725" style="color:#7c6af7">+62 851-7843-1725</a>
+        </address>
+      </div>
+    </div>
+    <div class="bottom">
+      <p><small>Copyright &copy; <time datetime="2026">2026</time> PareLabs Academy · Dari Kampung Inggris Pare untuk Indonesia</small></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 · Elemen & Tag HTML — PareLabs</title>
+  <style>
+    body { font-family: sans-serif; max-width: 740px; margin: 0 auto; padding: 30px 20px; color: #333; line-height: 1.7; }
+    h1 { color: #7c6af7; border-bottom: 3px solid #7c6af7; padding-bottom: 10px; }
+    h2 { color: #444; margin-top: 32px; }
+    .demo-box { border: 1px solid #e0e0e0; border-radius: 8px; padding: 18px; margin: 12px 0; background: #fafafa; }
+    .demo-box h3 { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .label { display: inline-block; background: #7c6af7; color: white; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+    code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; font-size: 13px; color: #c0392b; }
+    .block-demo { background: #e8f0fe; border: 1px dashed #7c6af7; padding: 8px; margin: 4px 0; border-radius: 4px; font-size: 13px; }
+    .inline-demo { background: #fce4ec; border: 1px dashed #e91e63; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+    hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+
+  <span class="label">PareLabs Web Dev · Sesi 1 · Topik 03</span>
+  <h1>Elemen & Tag HTML</h1>
+
+  <hr>
+
+  <!-- ======= ELEMEN DENGAN TAG PEMBUKA DAN PENUTUP ======= -->
+  <h2>1. Elemen dengan Tag Pembuka & Penutup</h2>
+  <div class="demo-box">
+    <div class="demo-box">
+      <h3>Contoh di browser:</h3>
+      <h1>Ini adalah h1 — Judul Terbesar</h1>
+      <h2>Ini adalah h2 — Sub Judul</h2>
+      <h3>Ini adalah h3 — Sub-sub Judul</h3>
+      <p>Ini adalah paragraf — <code>&lt;p&gt;</code> elemen block yang umum dipakai untuk teks biasa.</p>
+      <p>Ini adalah paragraf <strong>dengan teks tebal (strong)</strong> dan <em>teks miring (em)</em> di dalamnya.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ======= SELF-CLOSING TAGS ======= -->
+  <h2>2. Self-Closing Tags</h2>
+  <p>Tag-tag ini tidak butuh penutup karena tidak punya konten:</p>
+  <div class="demo-box">
+    <div class="demo-box">
+      <h3>Contoh di browser:</h3>
+      <p>Baris pertama.<br>Ini baris kedua setelah &lt;br&gt;.</p>
+      <p>Ini paragraf dengan garis di bawahnya:</p>
+      <hr style="border-top: 2px solid #7c6af7;">
+      <p>Ini paragraf setelah &lt;hr&gt;.</p>
+      <img src="https://via.placeholder.com/200x100/7c6af7/ffffff?text=Gambar+img" alt="Contoh gambar placeholder" style="border-radius:6px;">
+      <p>⬆️ Di atas adalah contoh <code>&lt;img&gt;</code> self-closing.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ======= NESTED ELEMENTS ======= -->
+  <h2>3. Elemen Bersarang (Nested)</h2>
+  <div class="demo-box">
+    <div class="demo-box">
+      <h3>Contoh di browser:</h3>
+      <!-- List dengan link di dalamnya -->
+      <ul>
+        <li>Belajar <strong>HTML</strong> — struktur</li>
+        <li>Belajar <em>CSS</em> — tampilan</li>
+        <li>Belajar <a href="https://developer.mozilla.org/id/docs/Web/JavaScript" target="_blank">JavaScript</a> — interaksi</li>
+      </ul>
+
+      <!-- Div yang berisi beberapa elemen -->
+      <div style="border: 1px solid #ddd; padding: 14px; border-radius: 8px; margin-top: 14px;">
+        <h3 style="margin:0 0 8px">Judul Card (h3 di dalam div)</h3>
+        <p style="margin:0 0 10px">Deskripsi di dalam card (p di dalam div)</p>
+        <button style="background:#7c6af7;color:white;border:none;padding:8px 16px;border-radius:6px;cursor:pointer">
+          Tombol (button di dalam div)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ======= BLOCK vs INLINE ======= -->
+  <h2>4. Block vs Inline Elements</h2>
+
+  <h3>Block — Mulai baris baru, lebar penuh:</h3>
+  <div class="block-demo">Ini adalah &lt;div&gt; — block element</div>
+  <div class="block-demo">Ini juga &lt;div&gt; — selalu di baris baru</div>
+  <div class="block-demo">Dan ini &lt;p&gt; — juga block element</div>
+
+  <h3 style="margin-top:20px">Inline — Mengalir bersama teks:</h3>
+  <p>
+    Ini teks biasa,
+    <span class="inline-demo">ini span inline</span>,
+    lanjut teks,
+    <strong class="inline-demo">ini strong inline</strong>,
+    dan <em class="inline-demo">ini em inline</em>
+    semua mengalir dalam satu baris.
+  </p>
+
+  <hr>
+
+  <!-- ======= LATIHAN ======= -->
+  <h2>Latihan</h2>
+  <div class="demo-box" style="background:#fffde7; border-color: #f9a825;">
+    <p>Coba tambahkan elemen-elemen ini ke halaman:</p>
+    <ol>
+      <li>Tambahkan <code>&lt;h2&gt;</code> dengan teks "Tentang Saya"</li>
+      <li>Tambahkan <code>&lt;p&gt;</code> berisi bio singkat kamu</li>
+      <li>Buat kalimat yang di dalamnya ada teks <code>&lt;strong&gt;</code> dan <code>&lt;em&gt;</code></li>
+      <li>Buat <code>&lt;div&gt;</code> yang berisi heading dan paragraf</li>
+    </ol>
+  </div>
+
+  <footer>
+    PareLabs Academy · Kampung Inggris Pare · <a href="https://parelabs.id">parelabs.id</a>
+  </footer>
+
+</body>
+</html>

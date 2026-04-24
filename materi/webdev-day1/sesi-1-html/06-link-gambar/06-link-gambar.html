@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06 · Link & Gambar — PareLabs</title>
+  <style>
+    body { font-family: sans-serif; max-width: 740px; margin: 0 auto; padding: 30px 20px; color: #333; line-height: 1.8; }
+    .label { display: inline-block; background: #7c6af7; color: white; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+    h1 { color: #7c6af7; border-bottom: 3px solid #7c6af7; padding-bottom: 10px; }
+    h2 { color: #555; margin-top: 32px; }
+    .demo { border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin: 12px 0; background: #fafafa; }
+    .info { background: #e8f4f8; border-left: 4px solid #3498db; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    .warn { background: #fff8e1; border-left: 4px solid #ffb300; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    a { color: #7c6af7; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; border-radius: 8px; }
+    figure { margin: 0; }
+    figcaption { font-size: 13px; color: #888; margin-top: 6px; font-style: italic; text-align: center; }
+    hr { border: none; border-top: 1px solid #eee; margin: 28px 0; }
+    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+
+  <span class="label">PareLabs Web Dev · Sesi 1 · Topik 06</span>
+  <h1>Link & Gambar</h1>
+
+  <!-- ===== LINK EKSTERNAL ===== -->
+  <h2>1. Link ke Website Eksternal</h2>
+  <div class="demo">
+    <p>
+      <a href="https://parelabs.id" target="_blank" rel="noopener noreferrer">
+        🌐 Kunjungi parelabs.id (buka tab baru)
+      </a>
+    </p>
+    <p>
+      <a href="https://developer.mozilla.org/id/" target="_blank" rel="noopener noreferrer">
+        📚 MDN Web Docs — Referensi HTML terlengkap
+      </a>
+    </p>
+    <div class="info">💡 Selalu tambahkan <code>rel="noopener noreferrer"</code> saat menggunakan <code>target="_blank"</code> untuk keamanan.</div>
+  </div>
+
+  <!-- ===== LINK INTERNAL ===== -->
+  <h2>2. Link ke Halaman Lain di Website</h2>
+  <div class="demo">
+    <p><a href="../05-teks-heading/05-teks-heading.html">← Kembali ke Topik 05 (Teks & Heading)</a></p>
+    <p><a href="../07-list/07-list.html">→ Lanjut ke Topik 07 (List)</a></p>
+    <div class="info">💡 Path relatif: <code>../</code> artinya naik satu folder, <code>./</code> artinya folder saat ini.</div>
+  </div>
+
+  <!-- ===== ANCHOR LINK ===== -->
+  <h2>3. Anchor Link — Scroll ke Bagian di Halaman Ini</h2>
+  <div class="demo">
+    <p>Navigasi cepat:</p>
+    <ul>
+      <li><a href="#bagian-gambar">↓ Langsung ke bagian Gambar</a></li>
+      <li><a href="#bagian-figure">↓ Langsung ke bagian Figure</a></li>
+      <li><a href="#bagian-latihan">↓ Langsung ke Latihan</a></li>
+    </ul>
+    <div class="info">💡 Klik link di atas, browser akan scroll ke elemen dengan <code>id</code> yang sesuai.</div>
+  </div>
+
+  <!-- ===== EMAIL & TELEPON ===== -->
+  <h2>4. Link Email & Telepon</h2>
+  <div class="demo">
+    <p>
+      <a href="mailto:hello@parelabs.id">📧 Kirim email ke hello@parelabs.id</a>
+    </p>
+    <p>
+      <a href="tel:+6285178431725">📞 Hubungi +62 851-7843-1725</a>
+    </p>
+    <p>
+      <a href="https://wa.me/6285178431725" target="_blank">💬 Chat WhatsApp</a>
+    </p>
+    <div class="info">💡 Link <code>tel:</code> sangat berguna di mobile — langsung membuka dial pad untuk menelepon.</div>
+  </div>
+
+  <hr id="bagian-gambar">
+
+  <!-- ===== GAMBAR ===== -->
+  <h2>5. Gambar dengan &lt;img&gt;</h2>
+  <div class="demo">
+    <!-- Gambar dari URL eksternal dengan ukuran ditentukan -->
+    <img src="https://via.placeholder.com/700x250/7c6af7/ffffff?text=Banner+PareLabs+Academy"
+         alt="Banner PareLabs Academy - Kursus Web Dev Terbaik di Kampung Inggris Pare"
+         width="700">
+    <p style="margin-top: 10px;">Gambar di atas menggunakan <code>src</code> dari URL eksternal dan <code>alt</code> yang deskriptif.</p>
+
+    <!-- Gambar kecil dengan width/height -->
+    <div style="display:flex; gap:12px; margin-top: 16px; flex-wrap:wrap;">
+      <img src="https://via.placeholder.com/150x150/3ecf8e/ffffff?text=150x150"
+           alt="Gambar kotak 150x150 pixel"
+           width="150" height="150">
+      <img src="https://via.placeholder.com/150x150/f5a623/ffffff?text=150x150"
+           alt="Gambar kotak 150x150 pixel kedua"
+           width="150" height="150">
+      <img src="https://via.placeholder.com/150x150/e06c75/ffffff?text=150x150"
+           alt="Gambar kotak 150x150 pixel ketiga"
+           width="150" height="150">
+    </div>
+  </div>
+
+  <!-- ===== GAMBAR RUSAK ===== -->
+  <h2>6. Kenapa alt Penting?</h2>
+  <div class="demo">
+    <img src="foto-tidak-ada.jpg"
+         alt="[Foto profil mentor PareLabs — gambar gagal dimuat]"
+         style="border: 1px dashed #ccc; padding: 10px; border-radius: 6px;">
+    <div class="warn">⚠️ Gambar di atas sengaja rusak. Teks <code>alt</code>-nya muncul sebagai pengganti. Tanpa <code>alt</code>, user hanya lihat ikon gambar broken tanpa keterangan apapun.</div>
+  </div>
+
+  <!-- ===== GAMBAR YANG BISA DIKLIK ===== -->
+  <h2>7. Gambar sebagai Link</h2>
+  <div class="demo">
+    <a href="https://parelabs.id" target="_blank" rel="noopener noreferrer">
+      <img src="https://via.placeholder.com/300x80/7c6af7/ffffff?text=Klik+Gambar+Ini+→+parelabs.id"
+           alt="Kunjungi PareLabs Academy"
+           style="cursor: pointer; transition: opacity 0.2s;"
+           onmouseover="this.style.opacity='0.8'"
+           onmouseout="this.style.opacity='1'">
+    </a>
+    <p style="font-size:13px; color:#888; margin-top:8px;">Gambar di atas adalah link — coba klik!</p>
+  </div>
+
+  <hr id="bagian-figure">
+
+  <!-- ===== FIGURE & FIGCAPTION ===== -->
+  <h2>8. Figure & Figcaption</h2>
+  <div class="demo">
+    <figure style="text-align: center;">
+      <img src="https://via.placeholder.com/500x280/1a1a2e/7c6af7?text=Suasana+Kelas+PareLabs+Pare"
+           alt="Suasana kelas offline PareLabs Academy di Kampung Inggris Pare"
+           style="width: 100%; max-width: 500px;">
+      <figcaption>Suasana kelas offline PareLabs Academy, Kampung Inggris Pare — Batch 1, April 2026</figcaption>
+    </figure>
+    <div class="info">💡 <code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code> adalah cara semantik untuk gambar dengan keterangan. Google menggunakannya untuk memahami konteks gambar.</div>
+  </div>
+
+  <hr id="bagian-latihan">
+
+  <!-- ===== LATIHAN ===== -->
+  <h2>Latihan</h2>
+  <div class="demo" style="background: #fffde7; border-color: #f9a825;">
+    <ol>
+      <li>Buat navigasi dengan 4 link: Home, Program, Tentang, Kontak</li>
+      <li>Buat link ke parelabs.id yang terbuka di tab baru (dengan rel yang tepat)</li>
+      <li>Tambahkan gambar dari internet (bisa pakai placeholder.com)</li>
+      <li>Buat gambar yang juga berfungsi sebagai link</li>
+      <li>Buat <code>&lt;figure&gt;</code> dengan gambar dan <code>&lt;figcaption&gt;</code></li>
+      <li>Tambahkan link email dan telepon untuk section kontak</li>
+    </ol>
+  </div>
+
+  <footer>
+    PareLabs Academy · Kampung Inggris Pare · <a href="https://parelabs.id">parelabs.id</a>
+  </footer>
+
+</body>
+</html>

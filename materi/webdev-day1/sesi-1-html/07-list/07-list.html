@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07 · List — PareLabs</title>
+  <style>
+    body { font-family: sans-serif; max-width: 740px; margin: 0 auto; padding: 30px 20px; color: #333; line-height: 1.8; }
+    .label { display: inline-block; background: #7c6af7; color: white; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+    h1 { color: #7c6af7; border-bottom: 3px solid #7c6af7; padding-bottom: 10px; }
+    h2 { color: #555; margin-top: 32px; }
+    .demo { border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin: 12px 0; background: #fafafa; }
+    .info { background: #e8f4f8; border-left: 4px solid #3498db; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    hr { border: none; border-top: 1px solid #eee; margin: 28px 0; }
+
+    /* Nav demo styling */
+    nav.demo-nav { background: #1a1a2e; padding: 14px 20px; border-radius: 8px; }
+    nav.demo-nav ul { list-style: none; display: flex; gap: 0; margin: 0; padding: 0; }
+    nav.demo-nav ul li a { color: #ccc; text-decoration: none; padding: 8px 16px; border-radius: 6px; display: block; font-size: 14px; transition: background 0.15s, color 0.15s; }
+    nav.demo-nav ul li a:hover { background: #7c6af7; color: white; }
+
+    /* Sidebar nav demo */
+    nav.side-nav ul { list-style: none; padding: 0; margin: 0; background: #f5f5f5; border-radius: 8px; overflow: hidden; }
+    nav.side-nav ul li a { display: block; padding: 10px 16px; color: #555; text-decoration: none; border-bottom: 1px solid #e0e0e0; font-size: 14px; transition: background 0.15s; }
+    nav.side-nav ul li:last-child a { border-bottom: none; }
+    nav.side-nav ul li a:hover { background: #ede9ff; color: #7c6af7; padding-left: 22px; }
+
+    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+
+  <span class="label">PareLabs Web Dev · Sesi 1 · Topik 07</span>
+  <h1>List (Daftar)</h1>
+
+  <!-- ===== UNORDERED LIST ===== -->
+  <h2>1. Unordered List &lt;ul&gt; — Daftar Bullet</h2>
+  <div class="demo">
+    <p>Materi yang akan dipelajari di kursus ini:</p>
+    <ul>
+      <li>HTML — struktur halaman web</li>
+      <li>CSS — tampilan dan layout</li>
+      <li>Tailwind CSS — framework CSS utility</li>
+      <li>JavaScript — logika dan interaksi</li>
+      <li>SEO On-Page — optimasi mesin pencari</li>
+      <li>Hosting — deploy website ke internet</li>
+    </ul>
+    <div class="info">💡 Gunakan <code>&lt;ul&gt;</code> kalau urutan item tidak penting.</div>
+  </div>
+
+  <!-- ===== ORDERED LIST ===== -->
+  <h2>2. Ordered List &lt;ol&gt; — Daftar Nomor</h2>
+  <div class="demo">
+    <p>Langkah membuat halaman HTML pertama:</p>
+    <ol>
+      <li>Buka VS Code atau Firebase Studio</li>
+      <li>Buat file baru bernama <code>index.html</code></li>
+      <li>Ketik <code>!</code> lalu tekan Tab untuk struktur dasar</li>
+      <li>Tulis konten di dalam <code>&lt;body&gt;</code></li>
+      <li>Simpan file dengan <code>Ctrl+S</code></li>
+      <li>Buka di browser — lihat hasilnya!</li>
+    </ol>
+    <div class="info">💡 Gunakan <code>&lt;ol&gt;</code> kalau urutan item penting — langkah-langkah, ranking, tutorial.</div>
+  </div>
+
+  <!-- ===== ORDERED LIST TYPES ===== -->
+  <h2>3. Tipe Penomoran &lt;ol&gt;</h2>
+  <div class="demo" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+    <div>
+      <p><strong>type="1" (default)</strong></p>
+      <ol type="1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+    </div>
+    <div>
+      <p><strong>type="A"</strong></p>
+      <ol type="A">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+    </div>
+    <div>
+      <p><strong>type="I" (romawi)</strong></p>
+      <ol type="I">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ===== DESCRIPTION LIST ===== -->
+  <h2>4. Description List &lt;dl&gt; — Daftar Definisi</h2>
+  <div class="demo">
+    <p>Glosarium istilah web development:</p>
+    <dl>
+      <dt style="font-weight: bold; color: #7c6af7; margin-top: 10px;">HTML</dt>
+      <dd style="margin-left: 20px; color: #555;">HyperText Markup Language — bahasa untuk membuat struktur halaman web</dd>
+
+      <dt style="font-weight: bold; color: #7c6af7; margin-top: 10px;">CSS</dt>
+      <dd style="margin-left: 20px; color: #555;">Cascading Style Sheets — bahasa untuk mengatur tampilan dan layout</dd>
+
+      <dt style="font-weight: bold; color: #7c6af7; margin-top: 10px;">JavaScript</dt>
+      <dd style="margin-left: 20px; color: #555;">Bahasa pemrograman yang berjalan di browser untuk menambah interaktivitas</dd>
+
+      <dt style="font-weight: bold; color: #7c6af7; margin-top: 10px;">API</dt>
+      <dd style="margin-left: 20px; color: #555;">Application Programming Interface — cara dua program berkomunikasi satu sama lain</dd>
+    </dl>
+  </div>
+
+  <!-- ===== NESTED LIST ===== -->
+  <h2>5. Nested List — List di Dalam List</h2>
+  <div class="demo">
+    <p>Roadmap belajar web development:</p>
+    <ul>
+      <li><strong>Frontend</strong>
+        <ul>
+          <li>HTML — struktur</li>
+          <li>CSS — tampilan
+            <ul>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+            </ul>
+          </li>
+          <li>JavaScript
+            <ul>
+              <li>DOM Manipulation</li>
+              <li>Fetch API / AJAX</li>
+              <li>React / Next.js (lanjutan)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Backend</strong>
+        <ul>
+          <li>Node.js / Python / Rust</li>
+          <li>Database (PostgreSQL, MySQL)</li>
+          <li>REST API</li>
+        </ul>
+      </li>
+      <li><strong>DevOps</strong>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>Hosting (Netlify, Vercel, VPS)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- ===== REAL WORLD: NAVIGATION ===== -->
+  <h2>6. Penggunaan Nyata — Navigation Menu dari &lt;ul&gt;</h2>
+  <div class="demo">
+    <p style="font-size:13px; color:#888; margin-bottom: 12px;">Navbar horizontal (ul + li + a + CSS flex):</p>
+
+    <nav class="demo-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Program</a></li>
+        <li><a href="#">Tentang</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#" style="background:#7c6af7; color:white;">Daftar Gratis</a></li>
+      </ul>
+    </nav>
+
+    <p style="font-size:13px; color:#888; margin: 16px 0 12px;">Sidebar navigation (ul + li + a + CSS):</p>
+
+    <nav class="side-nav" style="max-width: 220px;">
+      <ul>
+        <li><a href="#">📋 Dashboard</a></li>
+        <li><a href="#">🎓 Program Saya</a></li>
+        <li><a href="#">📚 Materi</a></li>
+        <li><a href="#">🏆 Sertifikat</a></li>
+        <li><a href="#">⚙️ Pengaturan</a></li>
+      </ul>
+    </nav>
+
+    <div class="info" style="margin-top:16px">💡 HTML-nya tetap <code>&lt;ul&gt;</code> + <code>&lt;li&gt;</code> + <code>&lt;a&gt;</code>. CSS yang membuat tampilannya berbeda!</div>
+  </div>
+
+  <!-- ===== LATIHAN ===== -->
+  <h2>Latihan</h2>
+  <div class="demo" style="background: #fffde7; border-color: #f9a825;">
+    <ol>
+      <li>Buat daftar 5 hobi kamu menggunakan <code>&lt;ul&gt;</code></li>
+      <li>Buat langkah-langkah cara membuat akun di parelabs.id menggunakan <code>&lt;ol&gt;</code></li>
+      <li>Buat glosarium 4 istilah menggunakan <code>&lt;dl&gt;</code></li>
+      <li>Buat nested list: 3 kategori, masing-masing punya 3 item</li>
+      <li>Buat navigation menu sederhana dari <code>&lt;ul&gt;</code> + <code>&lt;li&gt;</code> + <code>&lt;a&gt;</code></li>
+    </ol>
+  </div>
+
+  <footer>
+    PareLabs Academy · Kampung Inggris Pare · <a href="https://parelabs.id">parelabs.id</a>
+  </footer>
+
+</body>
+</html>

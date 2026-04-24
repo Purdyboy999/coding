@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 · Atribut HTML — PareLabs</title>
+  <style>
+    body { font-family: sans-serif; max-width: 740px; margin: 0 auto; padding: 30px 20px; color: #333; line-height: 1.7; }
+    h1 { color: #7c6af7; border-bottom: 3px solid #7c6af7; padding-bottom: 10px; }
+    h2 { color: #555; margin-top: 32px; font-size: 18px; }
+    .demo { border: 1px solid #e0e0e0; border-radius: 8px; padding: 18px; margin: 12px 0; background: #fafafa; }
+    code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; font-size: 13px; color: #c0392b; }
+    .info { background: #e8f4f8; border-left: 4px solid #3498db; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    .warn { background: #fff3cd; border-left: 4px solid #ffc107; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    hr { border: none; border-top: 1px solid #eee; margin: 28px 0; }
+    input, textarea { padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; width: 100%; margin: 4px 0 10px; box-sizing: border-box; }
+    button { padding: 8px 18px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+    .btn-primary { background: #7c6af7; color: white; border: none; }
+    .btn-secondary { background: white; color: #7c6af7; border: 2px solid #7c6af7; }
+    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+    .label { display: inline-block; background: #7c6af7; color: white; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+  <span class="label">PareLabs Web Dev · Sesi 1 · Topik 04</span>
+  <h1>Atribut HTML</h1>
+
+  <!-- ===== id ===== -->
+  <h2>Atribut <code>id</code> — Identitas Unik</h2>
+  <div class="demo">
+    <!-- id digunakan untuk anchor link dan JavaScript -->
+    <p id="paragraf-pertama">Ini paragraf dengan <code>id="paragraf-pertama"</code>.</p>
+    <p>Klik link ini untuk scroll ke section kontak: <a href="#kontak">Ke bagian kontak ↓</a></p>
+    <div class="info">💡 id harus unik — satu halaman satu id. Dipakai untuk link anchor dan JavaScript.</div>
+  </div>
+
+  <!-- ===== class ===== -->
+  <h2>Atribut <code>class</code> — Kelompok Elemen</h2>
+  <div class="demo">
+    <!-- Beberapa elemen pakai class yang sama -->
+    <button class="btn-primary">Tombol Primary</button>
+    <button class="btn-secondary" style="margin-left:8px">Tombol Secondary</button>
+    <p>Kedua tombol di atas punya class berbeda tapi bisa diberi style dari CSS yang sama.</p>
+    <div class="info">💡 class bisa dipakai di banyak elemen. Satu elemen boleh punya beberapa class sekaligus.</div>
+  </div>
+
+  <!-- ===== href ===== -->
+  <h2>Atribut <code>href</code> — Link Tujuan</h2>
+  <div class="demo">
+    <p><a href="https://parelabs.id" target="_blank">🌐 Ke website eksternal (buka tab baru)</a></p>
+    <p><a href="03-elemen-tag/03-elemen-tag.html">📄 Ke file HTML lain di folder ini</a></p>
+    <p><a href="#kontak">⬇️ Ke bagian di halaman ini (anchor)</a></p>
+    <p><a href="mailto:hello@parelabs.id">📧 Buka email client (mailto)</a></p>
+    <p><a href="tel:+6285178431725">📞 Buka dial pad HP (tel)</a></p>
+  </div>
+
+  <!-- ===== src & alt ===== -->
+  <h2>Atribut <code>src</code> & <code>alt</code> — Gambar</h2>
+  <div class="demo">
+    <!-- Gambar dari URL eksternal -->
+    <img src="https://via.placeholder.com/300x150/7c6af7/ffffff?text=Gambar+dengan+src+%26+alt"
+         alt="Gambar contoh dengan teks placeholder ungu"
+         style="border-radius: 8px; display:block; margin-bottom:10px;">
+    <p>Gambar di atas menggunakan <code>src</code> (URL gambar) dan <code>alt</code> (deskripsi).</p>
+
+    <!-- Gambar yang rusak — alt terlihat -->
+    <img src="gambar-tidak-ada.jpg"
+         alt="[Ini alt text yang muncul kalau gambar gagal load]"
+         style="border: 1px dashed #ccc; padding: 10px; border-radius: 6px;">
+    <div class="warn">⚠️ Gambar di atas sengaja rusak — lihat bagaimana <code>alt</code> ditampilkan sebagai gantinya.</div>
+  </div>
+
+  <!-- ===== style ===== -->
+  <h2>Atribut <code>style</code> — CSS Inline</h2>
+  <div class="demo">
+    <p style="color: #e74c3c; font-size: 18px; font-weight: bold;">Teks merah besar tebal</p>
+    <p style="color: #27ae60; font-style: italic;">Teks hijau miring</p>
+    <div style="background: #7c6af7; color: white; padding: 12px 18px; border-radius: 8px; text-align: center;">
+      Kotak ungu dengan teks putih
+    </div>
+    <div class="warn">⚠️ Style inline boleh tapi hindari berlebihan. Lebih baik pakai class CSS untuk konsistensi.</div>
+  </div>
+
+  <!-- ===== Form attributes ===== -->
+  <h2>Atribut Form: <code>type</code>, <code>placeholder</code>, <code>required</code>, <code>disabled</code></h2>
+  <div class="demo">
+    <label>Teks biasa:</label>
+    <input type="text" placeholder="Ketik nama kamu di sini...">
+
+    <label>Email (ada validasi format otomatis):</label>
+    <input type="email" placeholder="email@kamu.com" required>
+
+    <label>Password (tersembunyi):</label>
+    <input type="password" placeholder="Kata sandi minimal 8 karakter">
+
+    <label>Input yang di-disable (tidak bisa diisi):</label>
+    <input type="text" placeholder="Ini tidak bisa diisi" disabled>
+
+    <label>Angka saja:</label>
+    <input type="number" placeholder="0" min="0" max="100">
+
+    <button class="btn-primary" type="submit">Submit (required akan dicek)</button>
+  </div>
+
+  <hr>
+
+  <!-- ===== Anchor target section ===== -->
+  <section id="kontak" style="background: #f0eeff; border-radius: 8px; padding: 20px; margin-top: 20px;">
+    <h2>📍 Kamu sampai di bagian #kontak!</h2>
+    <p>Ini adalah section dengan <code>id="kontak"</code>. Link anchor <code>href="#kontak"</code> di atas akan scroll ke sini.</p>
+  </section>
+
+  <hr>
+
+  <!-- ===== Latihan ===== -->
+  <h2>Latihan</h2>
+  <div class="demo" style="background: #fffde7; border-color: #f9a825;">
+    <ol>
+      <li>Buat link ke parelabs.id yang terbuka di tab baru</li>
+      <li>Tambahkan gambar dengan atribut <code>src</code> dan <code>alt</code></li>
+      <li>Buat 2 tombol — satu dengan class "btn-primary", satu "btn-secondary"</li>
+      <li>Buat form dengan input email yang <code>required</code> dan satu input yang <code>disabled</code></li>
+      <li>Tambahkan anchor link yang scroll ke section di bawah halaman</li>
+    </ol>
+  </div>
+
+  <footer>
+    PareLabs Academy · Kampung Inggris Pare · <a href="https://parelabs.id">parelabs.id</a>
+  </footer>
+
+</body>
+</html>

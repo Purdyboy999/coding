@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09 · Form HTML — PareLabs</title>
+  <style>
+    body { font-family: sans-serif; max-width: 740px; margin: 0 auto; padding: 30px 20px; color: #333; line-height: 1.8; }
+    .label-badge { display: inline-block; background: #7c6af7; color: white; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+    h1 { color: #7c6af7; border-bottom: 3px solid #7c6af7; padding-bottom: 10px; }
+    h2 { color: #555; margin-top: 32px; }
+    .demo { border: 1px solid #e0e0e0; border-radius: 8px; padding: 24px; margin: 12px 0; background: #fafafa; }
+    .info { background: #e8f4f8; border-left: 4px solid #3498db; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; font-size: 14px; }
+    hr { border: none; border-top: 1px solid #eee; margin: 28px 0; }
+    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+
+    /* Form styling */
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; color: #555; font-weight: 500; margin-bottom: 5px; }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="number"],
+    .form-group input[type="tel"],
+    .form-group input[type="date"],
+    .form-group input[type="url"],
+    .form-group select,
+    .form-group textarea { width: 100%; padding: 9px 13px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; font-family: inherit; box-sizing: border-box; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #7c6af7; box-shadow: 0 0 0 3px rgba(124,106,247,0.15); }
+    .form-group input:disabled { background: #f5f5f5; color: #aaa; cursor: not-allowed; }
+    .radio-group, .checkbox-group { display: flex; gap: 20px; flex-wrap: wrap; }
+    .radio-group label, .checkbox-group label { display: flex; align-items: center; gap: 7px; cursor: pointer; font-size: 14px; color: #555; font-weight: normal; }
+    .btn { padding: 10px 22px; border-radius: 7px; font-size: 14px; cursor: pointer; border: none; font-family: inherit; }
+    .btn-primary { background: #7c6af7; color: white; }
+    .btn-primary:hover { background: #6b5af0; }
+    .btn-secondary { background: white; color: #7c6af7; border: 2px solid #7c6af7; }
+    .btn-secondary:hover { background: #f0eeff; }
+    fieldset { border: 1px solid #ddd; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; }
+    legend { padding: 0 8px; font-size: 13px; color: #7c6af7; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <span class="label-badge">PareLabs Web Dev · Sesi 1 · Topik 09</span>
+  <h1>Form HTML</h1>
+
+  <!-- ===== FORM REGISTRASI LENGKAP ===== -->
+  <h2>1. Form Registrasi Peserta — Contoh Lengkap</h2>
+  <div class="demo">
+    <form action="#" method="POST" onsubmit="handleSubmit(event)">
+
+      <fieldset>
+        <legend>Data Pribadi</legend>
+
+        <div class="form-group">
+          <label for="nama">Nama Lengkap <span style="color:red">*</span></label>
+          <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Santoso" required minlength="3">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Alamat Email <span style="color:red">*</span></label>
+          <input type="email" id="email" name="email" placeholder="email@kamu.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="hp">Nomor HP / WhatsApp <span style="color:red">*</span></label>
+          <input type="tel" id="hp" name="hp" placeholder="+62 8xx xxxx xxxx" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tgl_lahir">Tanggal Lahir</label>
+          <input type="date" id="tgl_lahir" name="tgl_lahir">
+        </div>
+
+        <div class="form-group">
+          <label>Jenis Kelamin</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="L" required> Laki-laki</label>
+            <label><input type="radio" name="gender" value="P"> Perempuan</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pilihan Program</legend>
+
+        <div class="form-group">
+          <label for="program">Program yang Diminati <span style="color:red">*</span></label>
+          <select id="program" name="program" required>
+            <option value="">-- Pilih Program --</option>
+            <option value="speaking-pro">Speaking Pro (1 bulan)</option>
+            <option value="whv-ready">WHV Ready (3 bulan)</option>
+            <option value="beasiswa-ready">Beasiswa Ready (4 bulan)</option>
+            <option value="web-dev">Web Dev (1 minggu) ← yang kita ikuti!</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="level">Level Bahasa Inggris Saat Ini</label>
+          <select id="level" name="level">
+            <option value="">-- Pilih Level --</option>
+            <option value="pemula">Pemula (belum pernah belajar formal)</option>
+            <option value="dasar">Dasar (A1-A2)</option>
+            <option value="menengah">Menengah (B1-B2)</option>
+            <option value="lanjut">Lanjut (C1-C2)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="motivasi">Motivasi Bergabung</label>
+          <textarea id="motivasi" name="motivasi" rows="4" placeholder="Ceritakan kenapa kamu ingin bergabung di PareLabs Academy..."></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Lainnya</legend>
+
+        <div class="form-group">
+          <label for="referral">Tahu PareLabs dari mana?</label>
+          <select id="referral" name="referral">
+            <option value="">-- Pilih --</option>
+            <option value="instagram">Instagram</option>
+            <option value="tiktok">TikTok</option>
+            <option value="teman">Rekomendasi Teman</option>
+            <option value="google">Google Search</option>
+            <option value="lainnya">Lainnya</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-group" style="flex-direction:column; gap: 10px;">
+            <label>
+              <input type="checkbox" name="newsletter" value="1">
+              Saya ingin menerima info program & promo via WhatsApp
+            </label>
+            <label>
+              <input type="checkbox" name="setuju" value="1" required>
+              Saya menyetujui <a href="#" style="color:#7c6af7">syarat dan ketentuan</a> PareLabs Academy <span style="color:red">*</span>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div style="display: flex; gap: 12px; margin-top: 8px;">
+        <button type="submit" class="btn btn-primary">🚀 Daftar Sekarang</button>
+        <button type="reset" class="btn btn-secondary">🔄 Reset Form</button>
+      </div>
+
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- ===== SEMUA JENIS INPUT ===== -->
+  <h2>2. Referensi Semua Jenis Input</h2>
+  <div class="demo">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div class="form-group">
+        <label>type="text"</label>
+        <input type="text" placeholder="Teks bebas">
+      </div>
+      <div class="form-group">
+        <label>type="email"</label>
+        <input type="email" placeholder="email@contoh.com">
+      </div>
+      <div class="form-group">
+        <label>type="password"</label>
+        <input type="password" placeholder="Password tersembunyi">
+      </div>
+      <div class="form-group">
+        <label>type="number"</label>
+        <input type="number" min="0" max="100" placeholder="0–100">
+      </div>
+      <div class="form-group">
+        <label>type="date"</label>
+        <input type="date">
+      </div>
+      <div class="form-group">
+        <label>type="color"</label>
+        <input type="color" value="#7c6af7" style="height:38px; padding:2px 4px; cursor:pointer;">
+      </div>
+      <div class="form-group">
+        <label>type="range" (slider)</label>
+        <input type="range" min="0" max="100" value="60" oninput="document.getElementById('range-val').textContent=this.value">
+        <span id="range-val">60</span>
+      </div>
+      <div class="form-group">
+        <label>type="file"</label>
+        <input type="file" accept="image/*">
+      </div>
+      <div class="form-group">
+        <label>disabled input</label>
+        <input type="text" value="Tidak bisa diubah" disabled>
+      </div>
+      <div class="form-group">
+        <label>readonly input</label>
+        <input type="text" value="Bisa dilihat, tidak bisa diubah" readonly style="background:#f9f9f9">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LATIHAN ===== -->
+  <h2>Latihan</h2>
+  <div class="demo" style="background: #fffde7; border-color: #f9a825;">
+    <p>Buat form kontak untuk halaman profil kamu dengan elemen berikut:</p>
+    <ol>
+      <li>Input nama (text, required)</li>
+      <li>Input email (email, required)</li>
+      <li>Select "Topik Pesan" (Pertanyaan / Feedback / Kolaborasi)</li>
+      <li>Textarea pesan (rows=5, required)</li>
+      <li>Checkbox "Saya bukan robot"</li>
+      <li>Tombol Submit</li>
+    </ol>
+  </div>
+
+  <footer>
+    PareLabs Academy · Kampung Inggris Pare · <a href="https://parelabs.id">parelabs.id</a>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert('Form berhasil divalidasi HTML5!\n\nDi dunia nyata, data akan dikirim ke server.\nUntuk sekarang, kita tangkap dengan JavaScript.');
+    }
+  </script>
+
+</body>
+</html>

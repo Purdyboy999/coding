@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrammarMaster - Belajar Bahasa Inggris</title>
+    <meta name="description" content="Belajar Grammar bahasa Inggris: Verbal vs Nominal, Part of Speech, 16 Tenses, dan Latihan Soal.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fa-solid fa-book-open"></i> GrammarMaster</h2>
+            <button class="mobile-close" id="mobile-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" data-target="home"><i class="fa-solid fa-house"></i> Beranda</a></li>
+            <li><a href="#" data-target="verbal-nominal"><i class="fa-solid fa-scale-balanced"></i> Verbal & Nominal</a></li>
+            <li><a href="#" data-target="part-of-speech"><i class="fa-solid fa-puzzle-piece"></i> Part of Speech</a></li>
+            <li><a href="#" data-target="tenses"><i class="fa-solid fa-clock"></i> 16 Tenses</a></li>
+            <li><a href="#" data-target="quiz"><i class="fa-solid fa-clipboard-question"></i> Latihan Soal</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <button id="sidebar-toggle"><i class="fa-solid fa-bars"></i></button>
+            <h2>GrammarMaster</h2>
+        </header>
+
+        <div class="content-container">
+
+            <!-- Section: Home -->
+            <section id="home" class="page-section active">
+                <div class="hero">
+                    <h1>Selamat Datang di GrammarMaster</h1>
+                    <p>Platform interaktif untuk menguasai Grammar Bahasa Inggris dengan mudah, cepat, dan menyenangkan. Pelajari materi dasar hingga tenses kompleks!</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary nav-btn" data-target="verbal-nominal">Mulai Belajar</button>
+                        <button class="btn btn-secondary nav-btn" data-target="quiz">Latihan Soal</button>
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="feature-card nav-btn" data-target="verbal-nominal" style="cursor: pointer;">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <h3>Verbal vs Nominal</h3>
+                        <p>Pahami fondasi utama dalam membuat kalimat bahasa Inggris.</p>
+                    </div>
+                    <div class="feature-card nav-btn" data-target="part-of-speech" style="cursor: pointer;">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                        <h3>Part of Speech</h3>
+                        <p>Kuasai fungsi tiap kata dalam kalimat, terutama Adjective.</p>
+                    </div>
+                    <div class="feature-card nav-btn" data-target="tenses" style="cursor: pointer;">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>16 Tenses</h3>
+                        <p>Pelajari 16 bentuk waktu lengkap dengan rumus dan contoh.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Verbal & Nominal -->
+            <section id="verbal-nominal" class="page-section">
+                <div class="section-header">
+                    <h1>Kalimat Verbal & Nominal</h1>
+                    <p>Dua tipe kalimat dasar yang wajib dikuasai sebelum belajar tenses.</p>
+                </div>
+                
+                <div class="material-content">
+                    <div class="card-box">
+                        <h2><i class="fa-solid fa-person-running"></i> Kalimat Verbal</h2>
+                        <p><strong>Kalimat Verbal</strong> adalah kalimat yang predikatnya berupa <strong>kata kerja utama (Ordinary Verb)</strong> yang menunjukkan suatu tindakan atau aktivitas.</p>
+                        
+                        <div class="example-box">
+                            <p><strong>Rumus:</strong> Subject + Verb + (Object/Complement)</p>
+                            <hr>
+                            <p><strong>Contoh:</strong></p>
+                            <ul>
+                                <li>She <strong>plays</strong> badminton every Sunday. <em>(plays = verb)</em></li>
+                                <li>They <strong>watched</strong> a movie last night. <em>(watched = verb)</em></li>
+                                <li>I <strong>will eat</strong> an apple. <em>(will eat = verb)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card-box">
+                        <h2><i class="fa-solid fa-id-card"></i> Kalimat Nominal</h2>
+                        <p><strong>Kalimat Nominal</strong> adalah kalimat yang predikatnya <strong>BUKAN kata kerja (Non-Verb)</strong>. Predikat ini biasanya berupa Noun (kata benda), Adjective (kata sifat), atau Adverb (kata keterangan). Oleh karena itu, kalimat nominal wajib menggunakan <strong>To Be</strong> (is/am/are/was/were/been) sebagai kata kerja bantu.</p>
+                        
+                        <div class="example-box">
+                            <p><strong>Rumus:</strong> Subject + To Be + Complement (Noun/Adjective/Adverb)</p>
+                            <hr>
+                            <p><strong>Contoh:</strong></p>
+                            <ul>
+                                <li>She <strong>is</strong> smart. <em>(is = to be, smart = adjective)</em></li>
+                                <li>They <strong>were</strong> students. <em>(were = to be, students = noun)</em></li>
+                                <li>I <strong>am</strong> in the classroom. <em>(am = to be, in the classroom = adverb)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Part of Speech -->
+            <section id="part-of-speech" class="page-section">
+                <div class="section-header">
+                    <h1>Part of Speech</h1>
+                    <p>8 kelas kata dalam bahasa Inggris yang menyusun sebuah kalimat.</p>
+                </div>
+                
+                <div class="material-content">
+                    <p>Terdapat 8 kelas kata dalam bahasa Inggris. Berikut adalah penjelasan rinci untuk masing-masing kelas kata:</p>
+                    
+                    <!-- Noun -->
+                    <div class="card-box mt-20" style="border-left: 5px solid #3B82F6;">
+                        <h2><i class="fa-solid fa-cube"></i> Noun (Kata Benda)</h2>
+                        <p>Digunakan untuk menamai orang, tempat, benda, ide, atau konsep abstrak.</p>
+                        <div class="example-box mt-20">
+                            <ul>
+                                <li><strong>Common Noun:</strong> city, man, book</li>
+                                <li><strong>Proper Noun:</strong> Jakarta, John, Harry Potter</li>
+                                <li><strong>Abstract Noun:</strong> happiness, freedom, love</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Verb -->
+                    <div class="card-box mt-20" style="border-left: 5px solid #EF4444;">
+                        <h2><i class="fa-solid fa-person-running"></i> Verb (Kata Kerja)</h2>
+                        <p>Digunakan untuk menyatakan suatu tindakan (action) atau keadaan (state of being).</p>
+                        <div class="example-box mt-20">
+                            <ul>
+                                <li><strong>Action Verb:</strong> run, eat, write, jump</li>
+                                <li><strong>Linking Verb:</strong> is, am, are, look, seem</li>
+                                <li><strong>Helping Verb:</strong> have, do, will, can</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pronoun -->
+                    <div class="card-box mt-20" style="border-left: 5px solid #8B5CF6;">
+                        <h2><i class="fa-solid fa-people-arrows"></i> Pronoun (Kata Ganti)</h2>
+                        <p>Digunakan untuk menggantikan kata benda (noun) untuk menghindari pengulangan yang tidak perlu.</p>
+                        <div class="example-box mt-20">
+                            <ul>
+                                <li><strong>Subjective:</strong> I, you, they, we, he, she, it</li>
+                                <li><strong>Objective:</strong> me, you, them, us, him, her, it</li>
+                                <li><strong>Possessive:</strong> mine, yours, theirs, ours, his, hers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Adverb -->
+                    <div class="card-box mt-20" style="border-left: 5px solid #F59E0B;">
+                        <h2><i class="fa-solid fa-gauge-high"></i> Adverb (Kata Keterangan)</h2>
+                        <p>Digunakan untuk memodifikasi/menjelaskan Verb, Adjective, atau Adverb lainnya.</p>
+                        <div class="example-box mt-20">
+                            <ul>
+                                <li><strong>Adverb of Manner:</strong> quickly, slowly, happily</li>
+                                <li><strong>Adverb of Time:</strong> yesterday, now, soon</li>
+                                <li><strong>Adverb of Place:</strong> here, there, everywhere</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Preposition -->
+                    <div class="card-box mt-20" style="border-left: 5px solid #10B981;">
+                        <h2><i class="fa-solid fa-link"></i> Preposition (Kata Depan)</h2>
+                        <p>Digunakan sebelum noun/pronoun untuk menunjukkan arah, waktu, tempat, atau lokasi spasial.</p>
+                        <div class="example-box mt-20">
+                            <p><strong>Contoh:</strong> in, on, at, under, between, above, behind</p>
+                            <p class="mt-10"><em>She is sitting <strong>on</strong> the chair.</em></p>
+                        </div>
+                    </div>
+
+                    <!-- Conjunction -->
+                    <div class="card-box mt-20" style="border-left: 5px solid #EC4899;">
+                        <h2><i class="fa-solid fa-code-branch"></i> Conjunction (Kata Hubung)</h2>
+                        <p>Digunakan untuk menghubungkan kata, frasa, atau klausa agar menjadi satu kesatuan.</p>
+                        <div class="example-box mt-20">
+                            <p><strong>Contoh:</strong> and, but, or, so, because, although</p>
+                            <p class="mt-10"><em>I like tea <strong>but</strong> he likes coffee.</em></p>
+                        </div>
+                    </div>
+
+                    <!-- Interjection -->
+                    <div class="card-box mt-20" style="border-left: 5px solid #6366F1;">
+                        <h2><i class="fa-solid fa-exclamation"></i> Interjection (Kata Seru)</h2>
+                        <p>Kata yang digunakan untuk mengekspresikan emosi, perasaan terkejut, atau reaksi mendadak.</p>
+                        <div class="example-box mt-20">
+                            <p><strong>Contoh:</strong> Wow!, Ouch!, Oops!, Yay!, Alas!</p>
+                            <p class="mt-10"><em><strong>Wow!</strong> That is a beautiful painting.</em></p>
+                        </div>
+                    </div>
+
+                    <div class="card-box mt-20" style="border-left: 5px solid var(--primary);">
+                        <h2><i class="fa-solid fa-star"></i> Adjective (Kata Sifat) - Penjelasan Rinci</h2>
+                        <p>Adjective digunakan untuk menjelaskan atau memodifikasi Noun atau Pronoun. Adjective memberikan informasi lebih seperti sifat, jumlah, atau jenis.</p>
+                        
+                        <h3 class="mt-20">Rumus Pembentukan Noun Phrase (Frasa Kata Benda)</h3>
+                        <p>Ketika membentuk Frasa Kata Benda, kita sering menggunakan urutan Adjective. Rumus yang sangat populer di kelas grammar (seperti di Kampung Inggris) adalah: <strong style="color:var(--primary); font-size: 1.2rem;">L - A - D - A - N</strong></p>
+                        
+                        <div class="formula-box" style="margin-top: 15px;">
+                            <ul>
+                                <li><strong>L (Limiting Adjective):</strong> Kata sifat yang membatasi. (Article: a/an/the, Demonstrative: this/that, Possessive: my/your, Numeral: one/two)</li>
+                                <li><strong>A (Adjective of Opinion/Quality):</strong> Kata sifat berupa opini atau kualitas. (beautiful, smart, ugly)</li>
+                                <li><strong>D (Descriptive - Size/Age/Shape):</strong> Kata sifat ukuran, umur, bentuk. (big, old, round)</li>
+                                <li><strong>A (Adjective of Color/Origin/Material):</strong> Kata sifat warna, asal, bahan. (red, Indonesian, wooden)</li>
+                                <li><strong>N (Noun):</strong> Kata benda inti yang sedang dijelaskan. (girl, table, car)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-box mt-20">
+                            <p><strong>Contoh Penggunaan L-A-D-A-N:</strong></p>
+                            <p style="font-size: 1.2rem; margin-top: 10px;">"The beautiful big red Indonesian wooden table"</p>
+                            <ul style="margin-top: 10px; font-size:0.95rem;">
+                                <li><strong>The</strong> (Limiting)</li>
+                                <li><strong>beautiful</strong> (Opinion)</li>
+                                <li><strong>big</strong> (Size)</li>
+                                <li><strong>red</strong> (Color)</li>
+                                <li><strong>Indonesian</strong> (Origin)</li>
+                                <li><strong>wooden</strong> (Material)</li>
+                                <li><strong>table</strong> (Noun Utama)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Tenses -->
+            <section id="tenses" class="page-section">
+                <div class="section-header">
+                    <h1>16 Tenses Bahasa Inggris</h1>
+                    <p>Kuasai perubahan bentuk kata kerja berdasarkan waktu kejadian.</p>
+                </div>
+                
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Semua Tenses</button>
+                    <button class="filter-btn" data-filter="present">Present</button>
+                    <button class="filter-btn" data-filter="past">Past</button>
+                    <button class="filter-btn" data-filter="future">Future</button>
+                    <button class="filter-btn" data-filter="past-future">Past Future</button>
+                </div>
+
+                <div class="tenses-grid" id="tenses-container">
+                    <!-- Cards will be generated here by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Section: Quiz -->
+            <section id="quiz" class="page-section">
+                <div class="section-header">
+                    <h1>Latihan Soal</h1>
+                    <p>Uji pemahaman Anda tentang materi yang telah dipelajari.</p>
+                </div>
+                
+                <div class="quiz-container">
+                    <div class="quiz-controls">
+                        <select id="quiz-format" class="quiz-select">
+                            <option value="multiple_choice">Pilihan Ganda</option>
+                            <option value="fill_blank">Isian Singkat (Fill in the Blank)</option>
+                            <option value="error_ident">Error Identification</option>
+                            <option value="essay">Uraian / Essay</option>
+                        </select>
+                        <button id="start-quiz-btn" class="btn btn-primary">Mulai Kuis</button>
+                    </div>
+
+                    <div id="quiz-area" class="quiz-area hidden">
+                        <div class="quiz-progress">Soal <span id="current-q-num">1</span> dari <span id="total-q-num">5</span></div>
+                        
+                        <div class="question-card">
+                            <h3 id="question-text">Question text goes here?</h3>
+                            <div class="options" id="options-container">
+                                <!-- Options will be generated here -->
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-actions">
+                            <button id="submit-answer-btn" class="btn btn-primary" disabled>Jawab</button>
+                            <button id="next-question-btn" class="btn btn-secondary hidden">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <div id="quiz-result" class="quiz-result hidden">
+                        <h2>Kuis Selesai!</h2>
+                        <div class="score-circle">
+                            <span id="final-score">80</span>%
+                        </div>
+                        <p id="score-message">Kerja Bagus!</p>
+                        <button id="restart-quiz-btn" class="btn btn-primary mt-20">Ulangi Kuis</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modal for details -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <span class="category-badge" id="modal-category">Present</span>
+                <h2 id="modal-title">Simple Present Tense</h2>
+            </div>
+            <div class="modal-body">
+                <div class="info-group">
+                    <h3><i class="fa-solid fa-circle-info"></i> Fungsi</h3>
+                    <p id="modal-function">Menyatakan fakta, kebiasaan, atau kejadian yang terjadi pada saat ini.</p>
+                </div>
+                
+                <div class="info-group formula-group">
+                    <h3><i class="fa-solid fa-square-root-variable"></i> Rumus</h3>
+                    <div class="formula-box">
+                        <p><strong>(+)</strong> <span id="modal-formula-pos">S + V1 (s/es)</span></p>
+                        <p><strong>(-)</strong> <span id="modal-formula-neg">S + do/does + not + V1</span></p>
+                        <p><strong>(?)</strong> <span id="modal-formula-int">Do/does + S + V1?</span></p>
+                    </div>
+                </div>
+
+                <div class="info-group example-group">
+                    <h3><i class="fa-solid fa-comment-dots"></i> Contoh Kalimat</h3>
+                    <div class="example-box">
+                        <p><strong>(+)</strong> <span id="modal-ex-pos">She reads a book every day.</span></p>
+                        <p><strong>(-)</strong> <span id="modal-ex-neg">She does not read a book every day.</span></p>
+                        <p><strong>(?)</strong> <span id="modal-ex-int">Does she read a book every day?</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
